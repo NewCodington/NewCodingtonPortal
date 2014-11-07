@@ -4,44 +4,32 @@ public class Admin extends User {
 
 	
 	//Atributos
-	private int adminId;
+	private int idAdmin;
 	private String userName;
 	private String password;
 	private String confirmPassword;
 
-	
-	
 	//Constructor
 	Admin()
 	{
-		this.adminId=0;
-		this.userName=null;
-		this.password=null;
-		this.confirmPassword=null;
+		this.idAdmin = 0;
+		this.userName = null;
+		this.password = null;
+		this.confirmPassword = null;
 		
 	}
 	
 	//Constructor con parametros
 	Admin(Admin admin)
 	{
-		this.adminId=admin.getVisitorId();
-		this.userName=admin.getUserName();
-		this.password=admin.getPassword();
-		this.confirmPassword=admin.getConfirmPassword();
-				
+		this.idAdmin = admin.getIdAdmin();
+		this.userName = admin.getUserName();
+		this.password = admin.getPassword();
+		this.confirmPassword = admin.getConfirmPassword();
 	}
-
-	
-	
 	
 	//GETTERS AND SETTERS
-	public int getVisitorId() {
-		return adminId;
-	}
 
-	public void setVisitorId(int visitorId) {
-		this.adminId = visitorId;
-	}
 
 	public String getUserName() {
 		return userName;
@@ -58,7 +46,6 @@ public class Admin extends User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 	
 
 	public String getConfirmPassword() {
@@ -67,6 +54,14 @@ public class Admin extends User {
 
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
+	}
+
+	public int getIdAdmin() {
+		return idAdmin;
+	}
+
+	public void setIdAdmin(int idAdmin) {
+		this.idAdmin = idAdmin;
 	}
 
 }
