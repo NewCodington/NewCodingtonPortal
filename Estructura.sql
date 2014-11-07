@@ -1,4 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS codingtonPortal;
+﻿CREATE SCHEMA IF NOT EXISTS codingtonPortal;
 
 CREATE  TABLE codingtonPortal.Users (
 	idUser INT NOT NULL AUTO_INCREMENT,
