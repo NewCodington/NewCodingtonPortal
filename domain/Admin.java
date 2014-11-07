@@ -1,3 +1,5 @@
+//Cambio Local
+
 package codingtonportal.model.domain;
 
 public class Admin extends User {
