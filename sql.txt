@@ -1,0 +1,76 @@
+CREATE  TABLE `codington`.`USERs` (
+
+  `idUser` INT NOT NULL ,
+
+  `First_name` VARCHAR(30) NOT NULL ,
+
+  `Last_name` VARCHAR(30) NOT NULL ,
+
+  `DNI` VARCHAR(12) NOT NULL ,
+
+  `Email` VARCHAR(200) NOT NULL ,
+
+  `Phone_number` VARCHAR(20) NULL ,
+
+  `Adress` VARCHAR(30) NULL ,
+
+  `Username` VARCHAR(12) NOT NULL ,
+
+  `Password` VARCHAR(30) NOT NULL ,
+	
+  `Admin` BINARY NOT NULL 0 ,
+
+  PRIMARY KEY (`idUser`) );
+
+
+
+CREATE  TABLE `codington`.`Place` (
+  `idPlace` INT NOT NULL ,
+  `Name` VARCHAR(15) NOT NULL ,
+  `Zone` VARCHAR(15) NOT NULL ,
+  `Image` BLOB NOT NULL ,
+  `Adress` VARCHAR(30) NOT NULL ,
+  `Description` VARCHAR(1000) NOT NULL ,
+  PRIMARY KEY (`idPlace`) );
+
+
+
+CREATE  TABLE `codington`.`Event` (
+  `idEvent` INT NOT NULL ,
+  `Name` VARCHAR(45) NOT NULL ,
+  `Description` VARCHAR(45) NOT NULL ,
+  `Place` VARCHAR(45) NOT NULL ,
+  `Duration` VARCHAR(45) NOT NULL ,
+  `Event_type` VARCHAR(45) NOT NULL ,
+  `Seats_avaible` INT NOT NULL ,
+  PRIMARY KEY (`idEvent`) );
+
+
+CREATE  TABLE `codington`.`EventRegistration` (
+  `idEventRegistration` INT NOT NULL ,
+  `idUser` INT NOT NULL ,
+  `idEvent` INT NOT NULL ,
+  PRIMARY KEY (`idEventRegistration`) ,
+  INDEX `Eventuser` (`idEvent` ASC) ,
+  INDEX `Userevent` (`idUser` ASC) ,
+  CONSTRAINT `Eventuser`
+    FOREIGN KEY (`idEvent` )
+    REFERENCES `codington`.`event` (`idEvent` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `Userevent`
+    FOREIGN KEY (`idUser` )
+    REFERENCES `codington`.`users` (`idUser` )
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+
+
+ALTER TABLE `codington`.`event` ADD COLUMN `StartTime` VARCHAR(15) NOT NULL  AFTER `Seats_avaible` , CHANGE COLUMN `idEvent` `idEvent` INT(11) NOT NULL AUTO_INCREMENT  , CHANGE COLUMN `Description` `Description` VARCHAR(45) NULL  , CHANGE COLUMN `Seats_avaible` `Seats_avaible` INT(11) NOT NULL DEFAULT 0  ;
+
+ALTER TABLE `codington`.`eventregistration` CHANGE COLUMN `idEventRegistration` `idEventRegistration` INT(11) NOT NULL AUTO_INCREMENT  ;
+
+ALTER TABLE `codington`.`place` CHANGE COLUMN `idPlace` `idPlace` INT(11) NOT NULL AUTO_INCREMENT  ;
+
+ALTER TABLE `codington`.`users` CHANGE COLUMN `idUser` `idUser` INT(11) NOT NULL AUTO_INCREMENT  ;
+
