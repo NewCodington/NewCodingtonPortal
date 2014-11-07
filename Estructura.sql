@@ -7,10 +7,10 @@ CREATE  TABLE codingtonPortal.Users (
 	DNI VARCHAR(12) NOT NULL ,
 	Email VARCHAR(200) NOT NULL ,
 	Phone_number VARCHAR(20) NULL ,
-	Adress VARCHAR(30) NULL ,
+	Address VARCHAR(30) NULL ,
 	Username VARCHAR(12) NOT NULL ,
 	Password VARCHAR(30) NOT NULL ,
-	isAdmin BINARY NOT NULL 0 ,
+	isAdmin TINYINT NOT NULL DEFAULT 0 ,
 	
 	PRIMARY KEY (idUser) );
 
@@ -21,7 +21,7 @@ CREATE  TABLE codingtonPortal.Place (
 	Name VARCHAR(15) NOT NULL ,
 	Region VARCHAR(15) NOT NULL ,
 	Image BLOB NOT NULL ,
-	Adress VARCHAR(30) NOT NULL ,
+	Address VARCHAR(30) NOT NULL ,
 	Description VARCHAR(1000) NOT NULL ,
 	
 	PRIMARY KEY (idPlace) );
@@ -43,8 +43,6 @@ CREATE  TABLE codingtonPortal.EventRegistration (
 	idEvent INT NOT NULL ,
 	
 	PRIMARY KEY (idEventRegistration) ,
-	INDEX Eventuser (idEvent ASC) ,
-	INDEX Userevent (idUser ASC) ,
   
 	CONSTRAINT Eventuser
     FOREIGN KEY (idEvent)
