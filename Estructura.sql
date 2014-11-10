@@ -8,7 +8,7 @@ CREATE  TABLE codingtonPortal.Users (
 	Email VARCHAR(200) NOT NULL ,
 	Phone_number VARCHAR(20) NULL ,
 	Address VARCHAR(30) NULL ,
-	Username VARCHAR(12) NOT NULL ,
+	Username VARCHAR(12) NOT NULL UNIQUE,
 	Password VARCHAR(30) NOT NULL ,
 	isAdmin TINYINT NOT NULL DEFAULT 0 ,
 	
@@ -29,9 +29,11 @@ CREATE  TABLE codingtonPortal.Place (
 
 
 CREATE  TABLE codingtonPortal.Event (
-	idEvent INT NOT NULL AUTO_INCREMENT,	Name VARCHAR(45) NOT NULL ,
+	idEvent INT NOT NULL AUTO_INCREMENT,	
+	Name VARCHAR(45) NOT NULL ,
 	Description VARCHAR(45) NULL ,
-	Place VARCHAR(45) NOT NULL ,	StartTime VARCHAR(15) NOT NULL ,
+	Place VARCHAR(45) NOT NULL ,	
+	StartTime VARCHAR(15) NOT NULL ,
 	Duration VARCHAR(45) NULL ,
 	Event_type VARCHAR(45) NULL ,
 	Seats_avaible INT NOT NULL DEFAULT 0 ,
@@ -39,7 +41,8 @@ CREATE  TABLE codingtonPortal.Event (
 
 
 CREATE  TABLE codingtonPortal.EventRegistration (
-	idEventRegistration INT NOT NULL AUTO_INCREMENT,	idUser INT NOT NULL ,
+	idEventRegistration INT NOT NULL AUTO_INCREMENT,	
+	idUser INT NOT NULL ,
 	idEvent INT NOT NULL ,
 	
 	PRIMARY KEY (idEventRegistration) ,
