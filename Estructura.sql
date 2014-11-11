@@ -36,7 +36,7 @@ CREATE  TABLE codingtonPortal.Event (
 	StartTime VARCHAR(15) NOT NULL ,
 	Duration VARCHAR(45) NULL ,
 	Event_type VARCHAR(45) NULL ,
-	Seats_avaible INT NOT NULL DEFAULT 0 ,
+	Seats_available INT NOT NULL DEFAULT 0 ,
 	PRIMARY KEY (idEvent) );
 
 
