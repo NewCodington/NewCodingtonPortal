@@ -10,6 +10,7 @@ public class Event {
 	private String duration;
 	private String eventType;
 	private int seatsAvailable;
+	private String starttime;
 	
 	
 	//Constructor
@@ -95,6 +96,14 @@ public class Event {
 
 	public void setSeatsAvailable(int seatsAvailable) {
 		this.seatsAvailable = seatsAvailable;
+	}
+
+	public String getStarttime() {
+		return starttime;
+	}
+
+	public void setStarttime(String starttime) {
+		this.starttime = starttime;
 	}
 
 

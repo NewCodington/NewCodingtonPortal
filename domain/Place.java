@@ -6,7 +6,7 @@ public class Place {
 	private int idPlace;
 	private String name;
 	private String description;
-	private String zone;
+	private String region;
 	private String image;
 	private String address; 
 	
@@ -15,7 +15,7 @@ public class Place {
 		this.idPlace=0;
 		this.name=null;
 		this.description=null;
-	    this.zone=null;
+	    this.region=null;
 		this.image=null;
 		this.address=null;
 	}
@@ -58,12 +58,12 @@ public class Place {
 		this.description = description;
 	}
 
-	public String getZone() {
-		return zone;
+	public String getRegion() {
+		return region;
 	}
 
-	public void setZone(String zone) {
-		this.zone = zone;
+	public void setRegion(String region) {
+		this.region = region;
 	}
 
 	public String getImage() {
