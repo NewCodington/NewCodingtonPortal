@@ -36,7 +36,7 @@ CREATE  TABLE codingtonPortal.Event (
 	idEvent INT NOT NULL AUTO_INCREMENT,	
 	Name VARCHAR(45) NOT NULL ,
 	Description VARCHAR(45) NULL ,
-	Place VARCHAR(45) NOT NULL ,	
+	Place INT NOT NULL ,	
 	StartTime VARCHAR(15) NOT NULL ,
 	Duration VARCHAR(45) NULL ,
 	Event_type VARCHAR(45) NULL ,
