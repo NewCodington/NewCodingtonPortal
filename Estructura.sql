@@ -23,8 +23,12 @@ CREATE  TABLE codingtonPortal.Place (
 	Image BLOB NOT NULL ,
 	Address VARCHAR(30) NOT NULL ,
 	Description VARCHAR(1000) NOT NULL ,
-	
-	PRIMARY KEY (idPlace) );
+	PRIMARY KEY (idPlace),
+	CONSTRAINT typetoPlace
+    	FOREIGN KEY (idUser)
+   	 REFERENCES codingtonPortal.Place (typePlace)
+    	ON DELETE CASCADE
+    	ON UPDATE CASCADE);
 
 
 
@@ -36,8 +40,13 @@ CREATE  TABLE codingtonPortal.Event (
 	StartTime VARCHAR(15) NOT NULL ,
 	Duration VARCHAR(45) NULL ,
 	Event_type VARCHAR(45) NULL ,
-	Seats_available INT NOT NULL DEFAULT 0 ,
-	PRIMARY KEY (idEvent) );
+	Seats_available INT NOT NULL DEFAULT 0 ,
+	PRIMARY KEY (idEvent),
+	CONSTRAINT Eventuser
+	FOREIGN KEY (PlacetoEvent)
+	REFERENCES codingtonPortal.Event (Place)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE );
 
 
 CREATE  TABLE codingtonPortal.EventRegistration (
@@ -57,3 +66,10 @@ CREATE  TABLE codingtonPortal.EventRegistration (
     REFERENCES codingtonPortal.Users (idUser)
     ON DELETE CASCADE
     ON UPDATE CASCADE );
+
+
+CREATE  TABLE codingtonPortal.typeplace (
+	idTypePlace INT NOT NULL AUTO_INCREMENT ,
+	Name VARCHAR(30) NOT NULL ,
+	Description VARCHAR(5000) NOT NULL,
+	PRIMARY KEY (idTypePlace) );
