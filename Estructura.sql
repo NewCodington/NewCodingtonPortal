@@ -1,6 +1,6 @@
-﻿CREATE SCHEMA IF NOT EXISTS codingtonPortal;
+﻿CREATE SCHEMA IF NOT EXISTS codington;
 
-CREATE  TABLE codingtonPortal.Users (
+CREATE  TABLE codington.Users (
 	idUser INT NOT NULL AUTO_INCREMENT,
 	First_name VARCHAR(30) NOT NULL ,
 	Last_name VARCHAR(30) NOT NULL ,
@@ -16,41 +16,54 @@ CREATE  TABLE codingtonPortal.Users (
 
 
 
-CREATE  TABLE codingtonPortal.Place (
+CREATE  TABLE codington.Typeplace (
+	idTypePlace INT NOT NULL AUTO_INCREMENT ,
+	Name VARCHAR(30) NOT NULL ,
+	Description VARCHAR(500) NOT NULL,
+	PRIMARY KEY (idTypePlace) );
+
+
+
+CREATE  TABLE codington.Place (
 	idPlace INT NOT NULL AUTO_INCREMENT ,
 	Name VARCHAR(15) NOT NULL ,
 	Region VARCHAR(15) NOT NULL ,
+  	TypePlace INT NOT NULL,
 	Image BLOB NOT NULL ,
 	Address VARCHAR(30) NOT NULL ,
 	Description VARCHAR(1000) NOT NULL ,
 	PRIMARY KEY (idPlace),
 	CONSTRAINT typetoPlace
-    	FOREIGN KEY (idUser)
-   	 REFERENCES codingtonPortal.Place (typePlace)
+    	FOREIGN KEY (TypePlace)
+   	 REFERENCES codington.TypePlace (idTypePlace)
     	ON DELETE CASCADE
     	ON UPDATE CASCADE);
 
 
 
-CREATE  TABLE codingtonPortal.Event (
-	idEvent INT NOT NULL AUTO_INCREMENT,	
+CREATE  TABLE codington.Event (
+	idEvent INT NOT NULL AUTO_INCREMENT,
+	
 	Name VARCHAR(45) NOT NULL ,
 	Description VARCHAR(45) NULL ,
-	Place INT NOT NULL ,	
+	Place INT NOT NULL ,
 	StartTime VARCHAR(15) NOT NULL ,
 	Duration VARCHAR(45) NULL ,
 	Event_type VARCHAR(45) NULL ,
 	Seats_available INT NOT NULL DEFAULT 0 ,
 	PRIMARY KEY (idEvent),
-	CONSTRAINT Eventuser
-	FOREIGN KEY (PlacetoEvent)
-	REFERENCES codingtonPortal.Event (Place)
+	CONSTRAINT PlaceToEvent
+	FOREIGN KEY (Place)
+	REFERENCES codington.Place (idPlace)
 	ON DELETE CASCADE
 	ON UPDATE CASCADE );
 
 
-CREATE  TABLE codingtonPortal.EventRegistration (
-	idEventRegistration INT NOT NULL AUTO_INCREMENT,	
+
+
+CREATE  TABLE codington.EventRegistration (
+	idEventRegistration INT NOT NULL AUTO_INCREMENT,
+	
 	idUser INT NOT NULL ,
 	idEvent INT NOT NULL ,
 	
@@ -58,18 +71,12 @@ CREATE  TABLE codingtonPortal.EventRegistration (
   
 	CONSTRAINT Eventuser
     FOREIGN KEY (idEvent)
-    REFERENCES codingtonPortal.Event (idEvent)
+    REFERENCES codington.Event (idEvent)
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE CASCADE,
+
 	CONSTRAINT Userevent
     FOREIGN KEY (idUser)
-    REFERENCES codingtonPortal.Users (idUser)
+    REFERENCES codington.Users (idUser)
     ON DELETE CASCADE
     ON UPDATE CASCADE );
-
-
-CREATE  TABLE codingtonPortal.typeplace (
-	idTypePlace INT NOT NULL AUTO_INCREMENT ,
-	Name VARCHAR(30) NOT NULL ,
-	Description VARCHAR(5000) NOT NULL,
-	PRIMARY KEY (idTypePlace) );
