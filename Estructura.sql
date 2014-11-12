@@ -29,9 +29,9 @@ CREATE  TABLE codington.Place (
 	Name VARCHAR(15) NOT NULL ,
 	Region VARCHAR(15) NOT NULL ,
   	TypePlace INT NOT NULL,
-	Image BLOB NOT NULL ,
-	Address VARCHAR(30) NOT NULL ,
-	Description VARCHAR(1000) NOT NULL ,
+	Image BLOB NULL ,
+	Address VARCHAR(30) NULL ,
+	Description VARCHAR(1000) NULL ,
 	PRIMARY KEY (idPlace),
 	CONSTRAINT typetoPlace
     	FOREIGN KEY (TypePlace)
