@@ -43,7 +43,6 @@ CREATE  TABLE codington.Place (
 
 CREATE  TABLE codington.Event (
 	idEvent INT NOT NULL AUTO_INCREMENT,
-	
 	Name VARCHAR(45) NOT NULL ,
 	Description VARCHAR(45) NULL ,
 	Place INT NOT NULL ,
