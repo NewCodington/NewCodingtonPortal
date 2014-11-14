@@ -11,9 +11,9 @@ function validateForm() {
 	 *
 	 */ 
 	if (ename.length == 0) {
-		alert("Enter employee id");
-	} else if (ename.length == 0) {
-		alert("Enter your name")
+		alert("Enter name");
+	} else if (epass.length == 0) {
+		alert("Enter password")
 	} else {
 		alert("Registering " + ename + " ...")
 	}
