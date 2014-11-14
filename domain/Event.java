@@ -6,26 +6,41 @@ public class Event {
 	private int eventId;
 	private String name;
 	private String description;
-	private String place;
+	private int place;
 	private String duration;
+	private String startTime;
 	private String eventType;
 	private int seatsAvailable;
-	private String starttime;
+	
 	
 	
 	//Constructor
-	public Event()
+	protected Event()
 	{
 		this.eventId=0;
 		this.name=null;
 		this.description=null;
-		this.place=null;
+		this.place=0;
 		this.duration=null;
+		this.startTime=null;
 		this.eventType=null;
 		this.seatsAvailable=0;
 	}
 
 	//Constructor con parametros
+	public Event(int eventId, String name, String description, int place,
+			String duration, String startTime, String eventType, int seatsAvailable)
+	{
+		this.eventId=eventId;
+		this.name=name;
+		this.description=description;
+		this.place=place;
+		this.duration=duration;
+		this.startTime = startTime;
+		this.eventType=eventType;
+		this.seatsAvailable=seatsAvailable;
+	}
+	
 	public Event(Event event)
 	{
 		this.eventId=event.getEventId();
@@ -33,6 +48,7 @@ public class Event {
 		this.description=event.getDescription();
 		this.place=event.getPlace();
 		this.duration=event.getDuration();
+		this.startTime=event.getStartTime();
 		this.eventType=event.getEventType();
 		this.seatsAvailable=event.getSeatsAvailable();
 	}
@@ -66,11 +82,11 @@ public class Event {
 		this.description = description;
 	}
 
-	public String getPlace() {
+	public int getPlace() {
 		return place;
 	}
 
-	public void setPlace(String place) {
+	public void setPlace(int place) {
 		this.place = place;
 	}
 
@@ -98,12 +114,12 @@ public class Event {
 		this.seatsAvailable = seatsAvailable;
 	}
 
-	public String getStarttime() {
-		return starttime;
+	public String getStartTime() {
+		return startTime;
 	}
 
-	public void setStarttime(String starttime) {
-		this.starttime = starttime;
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
 	}
 
 

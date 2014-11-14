@@ -1,5 +1,7 @@
 package codingtonportal.model.domain;
 
+import java.sql.Blob;
+
 public class Place {
 	
 	//Atribute	
@@ -7,18 +9,32 @@ public class Place {
 	private String name;
 	private String description;
 	private String region;
-	private String image;
+	private Blob image;
 	private String address; 
+	private int typePlace; 
+	
 	
 	//Constructor
-	Place(){
+	protected Place(){
 		this.idPlace=0;
 		this.name=null;
 		this.description=null;
 	    this.region=null;
 		this.image=null;
 		this.address=null;
+		this.typePlace=0;
 	}
+	
+	public Place(int idPlace, String name, String region, int typePlace, Blob image, String address, String description){
+		this.idPlace=idPlace;
+		this.name=name;
+		this.description=description;
+	    this.region=region;
+		this.image=image;
+		this.address=address;
+		this.typePlace=typePlace;
+	}
+	
 	
 	
 
@@ -66,11 +82,25 @@ public class Place {
 		this.region = region;
 	}
 
-	public String getImage() {
+	public Blob getImage() {
 		return image;
 	}
 
-	public void setImage(String image) {
+	public void setImage(Blob image) {
 		this.image = image;
+	}
+
+	/**
+	 * @return the typePlace
+	 */
+	public int getTypePlace() {
+		return typePlace;
+	}
+
+	/**
+	 * @param typePlace the typePlace to set
+	 */
+	public void setTypePlace(int typePlace) {
+		this.typePlace = typePlace;
 	}
 }
