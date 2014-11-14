@@ -3,7 +3,7 @@
 <head>
 	
 	<link rel="stylesheet" type="text/css" href="codington.css">
-		
+	<script language="javascript" src="Register.js"></script>
 </head>
 
 <body>
@@ -21,15 +21,15 @@
 		  <li><p>
 		  Username: 
 		  <br>
-		  <input type="text" name="fname"><br></p></li>
+		  <input type="text" id = "uname" name="username"><br></p></li>
 		  
 		  <li><p>
 		  Password: 
 		  <br>
-		  <input type="text" name="lname"><br></p></li>
+		  <input type="text" id = "pass" name="password"><br></p></li>
 
 		<p>
-			<INPUT type="SUBMIT" value="Submit">
+			<INPUT type="SUBMIT" value="Submit"  onclick="validateForm()">
 			<INPUT type="SUBMIT" value="Cancel">
 		</p>
 		
