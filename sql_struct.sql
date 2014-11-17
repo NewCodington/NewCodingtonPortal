@@ -36,7 +36,7 @@ CREATE  TABLE codington.RegionPlace (
 
 CREATE  TABLE codington.Place (
 	idPlace INT NOT NULL AUTO_INCREMENT ,
-	Name VARCHAR(15) NOT NULL ,
+	Name VARCHAR(50) NOT NULL ,
 	Region INT NOT NULL ,
   	TypePlace INT NOT NULL,
 	Image BLOB NULL ,
