@@ -71,7 +71,7 @@ div.nav_log
 	    line-height:30px;
 		background-color:#eeeeee;
 		height:30%;
-		width:20%;
+		width:40%;
 		padding:0px;	 
 		border-style: groove;
 		border-width: medium;
@@ -79,6 +79,11 @@ div.nav_log
         margin-right: auto;
 		margin-top: 5%;
 	}
+div.nav_log p.title{
+	text-align: center;
+	font-size: 150%;
+}
+
 div.footer
        {
 	   	background-color:black;

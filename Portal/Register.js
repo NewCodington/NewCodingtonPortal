@@ -21,3 +21,7 @@ function validateForm() {
 	return true;
 }
 
+function validateOk(){
+	alert("Ok");
+}
+
