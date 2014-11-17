@@ -10,13 +10,8 @@ function validateForm() {
 	 * Use the length property of the variable
 	 *
 	 */ 
-	if (ename.length == 0) {
-		alert("Enter name");
-	} else if (epass.length == 0) {
-		alert("Enter password")
-	} else {
-		alert("Registering " + ename + " ...")
-	}
+	if (!validateEmail())return false;
+	if (!validateConfirmPass())return false;
 		
 	return true;
 }
@@ -26,14 +21,34 @@ function validateEmail(){
 	var email = document.getElementById("email").value;
 	
     var atpos = email.indexOf("@");
-	alert("Ey2");
-	alert(atpos);
+
     var dotpos = email.lastIndexOf(".");
-	alert(dotpos);
-    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+	()[]\;:,<> or space 
+	var wrongchar = ["(",")","[","]",""\"",";",":","<",">"," "];
+	for (i = 0; i < wrongchar.length; i++){}
+	var wrongchar
+	
+	if(atpos > 0 && email[atpos-1] !=="."){
+		alert("Not a valid e-mail address");
+		return false;
+	}
+	
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+1>=email.length) {
         alert("Not a valid e-mail address");
         return false;
     }
+	return true
+}
+
+function validateConfirmPass(){
+	var pass = document.getElementById("pass").value;
+	var conpass = document.getElementById("cpass").value;
+
+    if (pass != conpass) {
+        alert("Password and confirm password is not the same");
+        return false;
+    }
+	return true;
 
 }
 
