@@ -79,6 +79,18 @@ div.nav_log
         margin-right: auto;
 		margin-top: 5%;
 	}
+	
+div.nav_log p.input  input{
+	width: 40%;
+}
+
+div.nav_log input{
+	width: 80%;
+}
+
+
+
+
 div.nav_log p.title{
 	text-align: center;
 	font-size: 150%;
