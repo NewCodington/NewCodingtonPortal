@@ -39,7 +39,7 @@ function validateEmail(){
 		return false;
 	}
 	
-    if (atpos< 1 || dotpos<atpos+2 || dotpos+1>=email.length) {
+    if (atpos < 1 || dotpos<atpos+2 || dotpos+1>=email.length) {
         alert("Not a valid e-mail address");
         return false;
     }
@@ -54,6 +54,28 @@ function validateConfirmPass(){
         alert("Password and confirm password is not the same");
         return false;
     }
+	return true;
+
+}
+
+function validateDni(){
+ 
+	var dni = document.getElementById("dni").value;
+	
+    if (dni.length > 0) {
+        if(dotpos = dni.indexOf(".")>0){
+		    
+		}
+		alert(dotpos);
+		dotpos = dni.indexOf(".");
+		alert(dotpos);
+		if (dotpos < 2 || dotpos<atpos+2 || dotpos+1>=email.length) {
+		
+        alert("Not a valid e-mail address");
+        return false;
+    }
+	}
+
 	return true;
 
 }
