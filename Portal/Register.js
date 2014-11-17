@@ -63,19 +63,24 @@ function validateDni(){
 	var dni = document.getElementById("dni").value;
 	
     if (dni.length > 0) {
+	alter("donde falla")
+	
         if(dotpos = dni.indexOf(".")>0){
-		    
-		}
-		alert(dotpos);
-		dotpos = dni.indexOf(".");
-		alert(dotpos);
+		    var subdni = dni.slice(dotpos + 2,length - 2);
+			alert(dni);
+			if(dotpos = subdni.indexOf(".")>2)
+			{
+			  alert(subdni);
+		    }
+		
 		if (dotpos < 2 || dotpos<atpos+2 || dotpos+1>=email.length) {
 		
         alert("Not a valid e-mail address");
         return false;
-    }
+		}
+    
 	}
-
+    }
 	return true;
 
 }
