@@ -23,10 +23,16 @@ function validateEmail(){
     var atpos = email.indexOf("@");
 
     var dotpos = email.lastIndexOf(".");
-	()[]\;:,<> or space 
-	var wrongchar = ["(",")","[","]",""\"",";",":","<",">"," "];
-	for (i = 0; i < wrongchar.length; i++){}
-	var wrongchar
+
+	var wrongchar = ["(",")","[","]","'\'",";",":","<",">"," "];
+	
+	for (i = 0; i < wrongchar.length; i++){
+		if (email.indexOf(wrongchar[i])>=0){
+			alert("Invalid character in the e-mail address");
+			return false;
+		}
+	}
+
 	
 	if(atpos > 0 && email[atpos-1] !=="."){
 		alert("Not a valid e-mail address");
