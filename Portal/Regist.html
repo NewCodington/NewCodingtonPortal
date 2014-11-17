@@ -1,115 +1,55 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
 	  
 	<head>
-		<style>
-			#header {
-				background-color:#eeeeee;
-				color:black;
-				text-align:center;
-				padding:5px;
-
-			}
-			#nav {
-				line-height:30px;
-				background-color:#eeeeee;
-				height:800px;
-				width:50%;
-				margin: 30px;
-				padding:0px;	 
-				border-style: groove;
-				border-width: medium;
-			}
-			#nav2 {
-			    line-height:30px;
-				background-color:#eeeeee;
-				height:500px;
-				width:30%;
-				margin: 30px;
-				padding:0px;	 
-				border-style: groove;
-				border-width: medium;
-				float: right;
-			}			
-            #window{
-			    height:800px;
-				width:100%;
-			}
-			
-			#footer {
-				background-color:black;
-				color:white;
-				clear:both;
-				text-align:center;
-				padding:5px;	 	 
-			}
-
-		</style>
-    </head>
+	<link rel="stylesheet" type="text/css" href="codington.css">
+	</head>
 
 <body>
 
-<div id="header">
+<div class = "header">
 	<h1>New Codington Portal</h1>
 	<h2>One of the World's Best Cities 2014</h2>
 </div>
 
-<div id="window">
-<div id="nav2">
-	   
-		<p style = "padding:20px" style="text-align:center">
-		Register New User</p>
-
-		<ul>
-		  <li><p>
-		  Username: 
-		  <br>
-		  <input type="text" name="fname"><br></p></li>
-		  
-		  <li><p>
-		  Password: 
-		  <br>
-		  <input type="password" name="pass"><br></p></li>
-
-		  <p>
-			<INPUT type="SUBMIT" value="Submit">
-			<INPUT type="SUBMIT" value="Cancel">
-		  </p>
-	    
-</div>
-<div id="nav">
-	
-		<p style = "padding:20px" style="text-align:center">
-        Sign in</p>
+<div class = "nav_log">
+	<form>
+		<p class = "title">
+        New User Log in</p>
 		<ul>
 
 		  <li><p>
 		  First name: 
 		  <br>
-		  <input type="text" name="fname"><br></p></li>
+		  <input type="text" name="fname" required/><br></p></li>
 		  <li><p>
 		  Last name: 
 		  <br>
-		  <input type="text" name="lname"><br></p></li>
+		  <input type="text" name="lname" required/><br></p></li>
 		  <li><p>
 		  Username:
 		  <br>
-		  <input type="text" name="uname"><br></p></li>
+		  <input type="text" name="uname" required/><br></p></li>
 		  <li><p>
 		  Password: 
 		  <br>
-		  <input type="password" name="pass"><br></p></li>
+		  <input type="password" name="pass" required/><br></p></li> 
 		  <li><p>
 		  Confirm Password: 
 		  <br>
-		  <input type="password" name="cpass"><br></p></li>
+		  <input type="password" name="cpass" required/><br></p></li>
 		  <li><p>
 		  DNI:
 		  <br>
-		  <input type="text" name="dni"><br></p></li>
+		  <input type="text" name="dni"/><br></p></li>
+		  <li><p>
+		  Phone Number:
+		  <br>
+		  <input type="tel" name="phone"><br></p></li>
 		  <li><p>
 		  Email: 
 		  <br>
-		  <input type="text" name="email"><br></p></li>
+		  <input type="email" name="email" required/><br></p></li>
 		  <li><p>
 		  Adress: 
 		  <br><input type="text" name="adress"><br></p></li>
@@ -121,16 +61,15 @@
 		</p>
 	  
 
+	</form>
 
 </div>
 
-</div>
 
 
 
-
-<div id="footer">
-Copyright © New Codington Portal
+<div class ="footer">
+Copyright © W3Schools.com
 </div>
 
 </body>
