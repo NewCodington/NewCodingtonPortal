@@ -22,42 +22,42 @@
 		  <li><p>
 		  First name: 
 		  <br>
-		  <input type="text" name="fname" pattern="\S{1,30}" title="Enter a valid first name (length between 1-30)"  required><br></p></li>
+		  <input type="text" name="fname" id = "fname" pattern="\S{1,30}" title="Enter a valid first name (length between 1-30)"  required><br></p></li>
 		  <li><p>
 		  Last name: 
 		  <br>
-		  <input type="text" name="lname" pattern="\S{1,30}" title="Enter a valid last name (length between 1-30)"required/><br></p></li>
+		  <input type="text" name="lname" id = "lname" pattern="\S{1,30}" title="Enter a valid last name (length between 1-30)"required/><br></p></li>
 		  <li><p>
 		  Username:
 		  <br>
-		  <input type="text" name="uname" pattern="\S{6,12}" title="Enter a valid username (length between 6-12)"required/><br></p></li>
+		  <input type="text" name="uname" id = "uname" pattern="\S{6,12}" title="Enter a valid username (length between 6-12)"required/><br></p></li>
 		  <li><p>
 		  Password: 
 		  <br>
-		  <input type="password" name="pass" pattern="\S{6,15}" title="Enter a valid password (length between 6-15)"required/><br></p></li> 
+		  <input type="password" name="pass" id = "pass" pattern="\S{6,15}" title="Enter a valid password (length between 6-15)"required/><br></p></li> 
 		  <li><p>
 		  Confirm Password: 
 		  <br>
-		  <input type="password" name="cpass" pattern="\S{6,15}" title="Enter a valid password (length between 6-15)"required/><br></p></li>
+		  <input type="password" name="cpass" id = "cpass" pattern="\S{6,15}" title="Enter a valid password (length between 6-15)" onblur="validateConfirmPass()" required/><br></p></li>
 		  <li><p>
 		  DNI:
 		  <br>
-		  <input type="text" name="dni"/><br></p></li>
+		  <input type="text" name="dni" id = "dni"/><br></p></li>
 		  <li><p>
 		  Phone Number:
 		  <br>
-		  <input type="tel" name="phone"><br></p></li>
+		  <input type="tel" name="phone" id = "phone"><br></p></li>
 		  <li><p>
 		  Email: 
 		  <br>
-		  <input type="email" name="email" required pattern="\S{3,200}" title="Enter a valid email (length between 3-200)"><br></p></li>
+		  <input type="email" name="email" id = "email" pattern="\S{3,200}" title="Enter a valid email (length between 3-200)" onblur = "validateEmail()"  required ><br></p></li>
 		  <li><p>
 		  Adress: 
-		  <br><input type="text" name="adress"><br></p></li>
+		  <br><input type="text" name="adress" id = "adress"><br></p></li>
 		 <ul>
 		</p>
 		<p class = "input">
-			<INPUT type="SUBMIT" value="Submit" onclick = "validateEmail()">
+			<INPUT type="SUBMIT" value="Submit">
 			<INPUT type="SUBMIT" value="Cancel">
 		</p>
 	  
