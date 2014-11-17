@@ -84,7 +84,7 @@ div.nav_log p.input  input{
 	width: 40%;
 }
 
-div.nav_log input{
+div.nav_log input,div.nav_log textarea{
 	width: 80%;
 }
 

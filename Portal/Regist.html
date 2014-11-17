@@ -3,6 +3,7 @@
 	  
 	<head>
 	<link rel="stylesheet" type="text/css" href="codington.css">
+	<script language="javascript" src="Register.js"></script>
 	</head>
 
 <body>
@@ -21,23 +22,23 @@
 		  <li><p>
 		  First name: 
 		  <br>
-		  <input type="text" name="fname" pattern="\S{1,30}" placeholder="Enter a valid first name (length between 1-30)"  required><br></p></li>
+		  <input type="text" name="fname" pattern="\S{1,30}" title="Enter a valid first name (length between 1-30)"  required><br></p></li>
 		  <li><p>
 		  Last name: 
 		  <br>
-		  <input type="text" name="lname" pattern="\S{1,30}" placeholder="Enter a valid last name (length between 1-30)"required/><br></p></li>
+		  <input type="text" name="lname" pattern="\S{1,30}" title="Enter a valid last name (length between 1-30)"required/><br></p></li>
 		  <li><p>
 		  Username:
 		  <br>
-		  <input type="text" name="uname" pattern="\S{6,12}" placeholder="Enter a valid username (length between 6-12)"required/><br></p></li>
+		  <input type="text" name="uname" pattern="\S{6,12}" title="Enter a valid username (length between 6-12)"required/><br></p></li>
 		  <li><p>
 		  Password: 
 		  <br>
-		  <input type="password" name="pass" pattern="\S{6,15}" placeholder="Enter a valid password (length between 6-15)"required/><br></p></li> 
+		  <input type="password" name="pass" pattern="\S{6,15}" title="Enter a valid password (length between 6-15)"required/><br></p></li> 
 		  <li><p>
 		  Confirm Password: 
 		  <br>
-		  <input type="password" name="cpass" pattern="\S{6,15}" placeholder="Enter a valid password (length between 6-15)"required/><br></p></li>
+		  <input type="password" name="cpass" pattern="\S{6,15}" title="Enter a valid password (length between 6-15)"required/><br></p></li>
 		  <li><p>
 		  DNI:
 		  <br>
@@ -49,14 +50,14 @@
 		  <li><p>
 		  Email: 
 		  <br>
-		  <input type="email" name="email" required pattern="\S{3,200}" placeholder="Enter a valid email (length between 3-200)"><br></p></li>
+		  <input type="email" name="email" required pattern="\S{3,200}" title="Enter a valid email (length between 3-200)"><br></p></li>
 		  <li><p>
 		  Adress: 
 		  <br><input type="text" name="adress"><br></p></li>
 		 <ul>
 		</p>
 		<p class = "input">
-			<INPUT type="SUBMIT" value="Submit">
+			<INPUT type="SUBMIT" value="Submit" onclick = "validateEmail()">
 			<INPUT type="SUBMIT" value="Cancel">
 		</p>
 	  

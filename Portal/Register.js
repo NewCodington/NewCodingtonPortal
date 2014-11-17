@@ -21,7 +21,19 @@ function validateForm() {
 	return true;
 }
 
-function validateOk(){
-	alert("Ok");
+function validateEmail(){
+	
+	var email = document.getElementById("email").value;
+	
+    var atpos = email.indexOf("@");
+	alert("Ey2");
+	alert(atpos);
+    var dotpos = email.lastIndexOf(".");
+	alert(dotpos);
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+
 }
 
