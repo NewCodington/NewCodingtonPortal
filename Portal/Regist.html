@@ -21,7 +21,7 @@
 		  <li><p>
 		  First name: 
 		  <br>
-		  <input type="text" name="fname" required/><br></p></li>
+		  <input type="text" name="fname" pattern="\S{1,30}" required ><br></p></li>
 		  <li><p>
 		  Last name: 
 		  <br>
@@ -49,7 +49,7 @@
 		  <li><p>
 		  Email: 
 		  <br>
-		  <input type="email" name="email" required/><br></p></li>
+		  <input type="email" name="email" required pattern="[0-9]{3}+@[A-Z]{4}"><br></p></li>
 		  <li><p>
 		  Adress: 
 		  <br><input type="text" name="adress"><br></p></li>
