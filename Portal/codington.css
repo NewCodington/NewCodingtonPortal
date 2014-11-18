@@ -43,6 +43,16 @@
 	    padding:5px;		
 	}
 	
+	div.sectionprofileright
+    {   
+        float:right;
+	    padding:5px;		
+	}
+	div.sectionprofileleft
+    {   
+        float:left;
+	    padding:5px;		
+	}
 div.event
        {
 		background-color:white;
