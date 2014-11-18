@@ -70,6 +70,7 @@ CREATE  TABLE codington.Event (
 	Place INT NOT NULL ,
 	StartTime VARCHAR(15) NOT NULL ,
 	Duration VARCHAR(45) NULL ,
+	Date_event  DATE NULL,
 	Event_type VARCHAR(45) NULL ,
 	Seats_available INT NOT NULL DEFAULT 0 ,
 	PRIMARY KEY (idEvent),
