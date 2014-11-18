@@ -1,5 +1,4 @@
 ﻿/*-- Insert users into database --*/
-
 INSERT INTO codington.visitor(First_name, Last_name, DNI, Email, Phone_number, Address,Username, Password, isAdmin) VALUES ('Jhon', 'Smith', '03.652.105-G', 'jhon.Smith@accenture.com', '9653257956', 'La finca,1, New Codington', 'JhonS', 'jhons6', 1);
 INSERT INTO codington.visitor(First_name, Last_name, DNI, Email, Phone_number, Address,Username, Password, isAdmin) VALUES ('Peter', 'Pan', '08.512.254-T', 'Peter.Pan12@gmail.com', '6945269854', 'Puy Chemin,12,New Codington', 'PeterP', 'peterp6', 0);
 INSERT INTO codington.visitor(First_name, Last_name, DNI, Email, Phone_number, Address,Username, Password, isAdmin) VALUES ('Mary', 'Strawberry', '36.592.561-K', 'mary.1980@gmail.com', '3695245865', 'Gosfort,2,New Codington', 'MaryS', 'marys6', 0);
@@ -13,7 +12,6 @@ INSERT INTO codington.visitor(First_name, Last_name, DNI, Email, Phone_number, A
 
 
 /*-- Insert type of places into database --*/
-
 INSERT INTO codington.typeplace(Name, Description) VALUES ('Museum', 'The Codington Museum is the work of American architect Frank Gehry and is a magnificent example of modern architecture in the twentieth century. With 24,000 m2, of which 11,000 are for exhibition space, the building is an architectural landmark for its bold architecture and innovative design. It is open from 10 am to 6 pm Tuesday through Sunday, and closed Mondays.') ;
 INSERT INTO codington.typeplace(Name, Description) VALUES ('Large Business', 'Bill presents its new business complex based on architectural quality, exclusive design and commitment to the environment and energy saving. It is located in the city of Madrid, within the biggest urban development in Europe, and less than 15 minutes away from any nerve center of the town. It is open from 7 am to 8 pm Monday through Friday.');
 INSERT INTO codington.typeplace(Name, Description) VALUES ('Stadium', 'The Codington Stadium is a multi-purpose arena located in downtown New Codington. It has a capacity that varies depending on the activity shelter, can expand its capacity from 10,000 to 12,500 in initial encounters basketball, or a maximum 15,500 concerts. Among its activities, in addition to the above two, are to host the athletics events or handball matches, being the sports stadium in New Codington that offers more possibilities. It is open from 1pm to 11pm every day.');
@@ -26,18 +24,16 @@ INSERT INTO codington.typeplace(Name, Description) VALUES ('Market', 'The city o
 
 
 /*-- Insert type of places into database --*/
-
-INSERT INTO codington.RegionPlace(Name, Description) VALUES ('NORTH', 'The North region of the Town.') ;
-INSERT INTO codington.RegionPlace(Name, Description) VALUES ('SOUTH', 'The South region of the Town.');
-
+INSERT INTO codington.RegionPlace(Name, Description) VALUES ('NORTH', 'The North region of the Town Codington.') ;
+INSERT INTO codington.RegionPlace(Name, Description) VALUES ('SOUTH', 'The South region of the Town Codington.');
 
 
 
 /*-- Insert places into database --*/
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington Museum of Natural History',1,1,'Puy Chemin,1,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington Museum of Art',1,1,'Gosfort,22,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Large Business',1,2,'Puy Chemin,55,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Large Business',1,2,'TheoBald,44,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Large Business in the North',1,2,'Puy Chemin,55,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('The premier Large Business',1,2,'TheoBald,44,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington First North Stadium',1,3,'Puy Chemin,99,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington Second North Stadium',1,3,'High Holbon,11,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('iPic Theater',1,4,'Puy Chemin,155,New Codington','');
@@ -46,14 +42,14 @@ INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUE
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('WoodPark Zoo',1,5,'Clerkenwell,52,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Hide Codington Park',1,6,'Puy Chemin,256,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Royal Codington Park',1,6,'RosvertyAve,1,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('National Galery Tourism Atraction',1,7,'Puy Chemin,299,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('The Codington Eye Tourism Atraction',1,7,'Percival St,14,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('National Galery Tourism Attraction',1,7,'Puy Chemin,299,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('The Codington Eye Tourism Attraction',1,7,'Percival St,14,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Share Codington Market',1,8,'Puy Chemin,355,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('BukoMarket',1,8,'RosvertyAve,111,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington Museum of Science',2,1,'Clerkenwell,2,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington Museum of Astronomy',2,1,'Farrington,82,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Large Business',2,2,'High Holbon,111,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Large Business',2,2,'Gosfort,222,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('The Most Popular Large Business',2,2,'High Holbon,111,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('The Large Business South Codington',2,2,'Gosfort,222,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington First South Stadium',2,3,'Percival St,224,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Codington Second South Stadium',2,3,'Betford,12,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Michgan Theater',2,4,'Fumival,12,New Codington','');
@@ -62,21 +58,20 @@ INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUE
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('South Colchter Zoo',2,5,'Proctest St,12,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('National Codington Park',2,6,'Old Gloucester, 22','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Briant Park',2,6,'Jons Mews,121,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Tower of Codington Tourism Atraction',2,7,'Bell Yard,23,New Codington','');
-INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Tate Modern of Codington Tourism Atraction',2,7,'St Andrew,12,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Tower of Codington Tourism Attraction',2,7,'Bell Yard,23,New Codington','');
+INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Tate Modern of Codington Tourism Attraction',2,7,'St Andrew,12,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Livid Codington Market',2,8,'Carter St,33,New Codington','');
 INSERT INTO codington.place(Name, Region, TypePlace, Address, Description) VALUES ('Pulled Codington Market',2,8,'Tallist St,44,New Codington','');
 
 
 
 /*-- Insert events into database --*/
-
-INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Ronaldo´s friends vs Messi´s friends', 'Football match with best world´s players', 5,'7.00 PM', '90 min', 'Football', 85454 );
-INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Velázquez, painter of history', 'Conference about the famous spanish painter', 2, '9.00 AM', '60 min', 'Painting', 100);
-INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('The Lion King', 'Disney’s award-winning musical The Lion King ', 7, '8.15 PM', '70 min', 'Musical', 1104);
-INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Boston Americans vs Chicago White Sox', 'American League of Baseball match', 22, '10.30 PM', '190 min', 'Baseball', 56000 );
-
-
-
-/*-- Insert event registration into database --*/
-
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Velázquez, painter of history', 'Conference about the famous spanish painter.', 1, '9.00 AM', '60 min', 'Painting', 30);
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('The Science of Natural Disasters', 'Earthquakes. Volcanoes. Tornadoes...', 2, '17.00 PM', '120 min', 'Science', 60);
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Ronaldo´s friends vs Messi´s friends', 'Football match with best world´s players.', 5,'7.00 PM', '90 min', 'Football', 85454 );
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('The Lion King', 'Disney’s award-winning musical The Lion King.', 8, '8.15 PM', '70 min', 'Musical', 1104);
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Boston Americans vs Chicago White Sox', 'American League of Baseball match.', 22, '10.30 PM', '190 min', 'Baseball', 56000 );
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Zoo Guided Tour', 'Zoo Guided tour to see the different animals.', 26, '12.30 PM', '100 min', 'Zoo Animals', 254 );
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Festival Park', 'Celebration for handicapped children.', 27, '16.30 PM', '50 min', 'Festival', 560 );
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Tour in Eye Tourism Attraction', 'Giant Ferris on the South of Codington.', 13, '19.30 PM', '30 min', 'Attraction', 952 );
+INSERT INTO codington.event(Name, Description, Place, StartTime, Duration , Event_type, Seats_available) VALUES ('Medieval Market', 'Sale products of medieval times.', 32, '10.30 AM', '150 min', 'Market', 2102 );

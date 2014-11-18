@@ -1,5 +1,9 @@
-﻿CREATE SCHEMA IF NOT EXISTS codington;
+﻿/*-- Defines the database if does not exist --*/
+CREATE SCHEMA IF NOT EXISTS codington;
 
+
+
+/*-- Create the table Visitor in the new Schema --*/
 CREATE  TABLE codington.Visitor (
 	idVisitor INT NOT NULL AUTO_INCREMENT,
 	First_name VARCHAR(30) NOT NULL ,
@@ -11,20 +15,20 @@ CREATE  TABLE codington.Visitor (
 	Username VARCHAR(12) NOT NULL UNIQUE,
 	Password VARCHAR(30) NOT NULL ,
 	isAdmin TINYINT NOT NULL DEFAULT 0 ,
-	
 	PRIMARY KEY (idVisitor) );
 
 
-
+	
+/*-- Create the table TypePlace in the new Schema --*/
 CREATE  TABLE codington.TypePlace (
 	idTypePlace INT NOT NULL AUTO_INCREMENT ,
 	Name VARCHAR(30) NOT NULL ,
 	Description VARCHAR(500) NOT NULL,
 	PRIMARY KEY (idTypePlace) );
-
 	
 	
 	
+/*-- Create the table RegionPlace in the new Schema --*/
 CREATE  TABLE codington.RegionPlace (
 	idRegionPlace INT NOT NULL AUTO_INCREMENT ,
 	Name VARCHAR(30) NOT NULL ,
@@ -33,7 +37,7 @@ CREATE  TABLE codington.RegionPlace (
 
 	
 	
-
+/*-- Create the table Place in the new Schema --*/
 CREATE  TABLE codington.Place (
 	idPlace INT NOT NULL AUTO_INCREMENT ,
 	Name VARCHAR(50) NOT NULL ,
@@ -43,6 +47,7 @@ CREATE  TABLE codington.Place (
 	Address VARCHAR(30) NULL ,
 	Description VARCHAR(1000) NULL ,
 	PRIMARY KEY (idPlace),
+	
 	CONSTRAINT typeToPlace
     	FOREIGN KEY (TypePlace)
    	 REFERENCES codington.TypePlace (idTypePlace)
@@ -56,7 +61,8 @@ CREATE  TABLE codington.Place (
     	ON UPDATE CASCADE);
 
 
-
+		
+/*-- Create the table Event in the new Schema --*/
 CREATE  TABLE codington.Event (
 	idEvent INT NOT NULL AUTO_INCREMENT,
 	Name VARCHAR(45) NOT NULL ,
@@ -76,7 +82,7 @@ CREATE  TABLE codington.Event (
 
 
 
-
+/*-- Create the table EventRegistration in the new Schema --*/
 CREATE  TABLE codington.EventRegistration (
 	idEventRegistration INT NOT NULL AUTO_INCREMENT,
 	idVisitorR INT NOT NULL ,
