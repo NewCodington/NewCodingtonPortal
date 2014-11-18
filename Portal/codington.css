@@ -23,7 +23,19 @@
 		border-style: groove;
 		border-width: medium;
 	}
-	
+	div.admin
+    {
+		line-height:20px;
+		background-color:#eeeeee;
+		height:100%;
+		width:160px;
+		float:center;
+		padding:0px;
+		margin-top:0px;	
+		margin-left: 42.5%;
+		border-style: groove;
+		border-width: medium;
+	}
 	div.section
     {   
         float:left;
@@ -146,7 +158,7 @@ div.footer
 	text-decoration:none;  
 	color:#003399;	
 	}
-
+	
 	p.menuVerticalTitulos
     {
 		font-size:24px;
@@ -154,6 +166,8 @@ div.footer
 		border:3px;
 		text-align:center;
 	}
+	
+	
 	
 	a:hover{
 	text-decoration:none;  
