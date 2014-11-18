@@ -29,9 +29,10 @@
 		background-color:#eeeeee;
 		height:100%;
 		width:160px;
-		float:center;
+		float:left;
 		padding:0px;
 		margin-top:0px;	
+		margin-botton:0px;
 		margin-left: 42.5%;
 		border-style: groove;
 		border-width: medium;
@@ -77,6 +78,14 @@ p.region
 	    text-align: center;
 	    font-size: 18px;
 	    margin-top: 5px;
+   	}
+   
+   p.regionadmin
+    {
+	    text-align: center;
+	    font-size: 18px;
+	    margin-top: 10px;
+		margin-bottom:10px;
    	}
    
 div.nav_log 
@@ -159,6 +168,7 @@ div.footer
 	color:#003399;	
 	}
 	
+	
 	p.menuVerticalTitulos
     {
 		font-size:24px;
@@ -167,7 +177,15 @@ div.footer
 		text-align:center;
 	}
 	
-	
+		p.menuVerticalTitulosAdmin
+    {
+		font-size:24px;
+		color:#000000;
+		border:3px;
+		margin-top:2px;
+		margin-bottom:3px;
+		text-align:center;
+	}
 	
 	a:hover{
 	text-decoration:none;  
