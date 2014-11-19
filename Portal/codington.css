@@ -158,6 +158,8 @@ div.footer
 	    margin-top:0; margin-bottom:0;	
    	}
 
+
+
 	p.menuHorizontal
        {
 		font-size:28px;
@@ -166,6 +168,15 @@ div.footer
 		border:3px;
 		text-align:right;		
 		}
+		p.menuHorizontalLog
+       {
+		font-size:28px;
+		color:#333333;
+		background-color:#CCCCCC;
+		border:3px;
+		text-align:left;		
+		}
+	
 	
 	a.link{
 	text-decoration:none;  
