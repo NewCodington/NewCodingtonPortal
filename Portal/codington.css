@@ -88,7 +88,7 @@ p.region
 	    text-align: center;
 	    font-size: 18px;
 	    margin-top: 5px;
-   	}
+		}
    
    p.regionadmin
     {
@@ -195,6 +195,7 @@ div.footer
 		font-size:24px;
 		color:#000000;
 		border:3px;
+		margin-top:15px;
 		text-align:center;
 	}
 	
