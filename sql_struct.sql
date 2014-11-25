@@ -18,16 +18,6 @@ CREATE  TABLE codington.Visitor (
 	PRIMARY KEY (idVisitor) );
 
 
-	
-/*-- Create the table TypePlace in the new Schema --*/
-CREATE  TABLE codington.TypePlace (
-	idTypePlace INT NOT NULL AUTO_INCREMENT ,
-	Name VARCHAR(30) NOT NULL ,
-	Description VARCHAR(500) NOT NULL,
-	PRIMARY KEY (idTypePlace) );
-	
-	
-	
 /*-- Create the table RegionPlace in the new Schema --*/
 CREATE  TABLE codington.RegionPlace (
 	idRegionPlace INT NOT NULL AUTO_INCREMENT ,
@@ -35,13 +25,29 @@ CREATE  TABLE codington.RegionPlace (
 	Description VARCHAR(500) NOT NULL,
 	PRIMARY KEY (idRegionPlace) );
 
+
+
+	
+/*-- Create the table TypePlace in the new Schema --*/
+CREATE  TABLE codington.TypePlace (
+	idTypePlace INT NOT NULL AUTO_INCREMENT ,
+	Name VARCHAR(30) NOT NULL ,
+	Description VARCHAR(500) NOT NULL,
+	RegionPlace INT NOT NULL,
+	
+	CONSTRAINT typeToRegion
+    	FOREIGN KEY (idRegionPlace)
+   	 REFERENCES codington.RegionPlace (idRegionPlace)
+    	ON DELETE CASCADE
+    	ON UPDATE CASCADE);
+	PRIMARY KEY (idTypePlace) );
+
 	
 	
 /*-- Create the table Place in the new Schema --*/
 CREATE  TABLE codington.Place (
 	idPlace INT NOT NULL AUTO_INCREMENT ,
 	Name VARCHAR(50) NOT NULL ,
-	Region INT NOT NULL ,
   	TypePlace INT NOT NULL,
 	Image BLOB NULL ,
 	Address VARCHAR(30) NULL ,
@@ -51,12 +57,6 @@ CREATE  TABLE codington.Place (
 	CONSTRAINT typeToPlace
     	FOREIGN KEY (TypePlace)
    	 REFERENCES codington.TypePlace (idTypePlace)
-    	ON DELETE CASCADE
-    	ON UPDATE CASCADE,
-		
-	CONSTRAINT regionToPlace
-    	FOREIGN KEY (Region)
-   	 REFERENCES codington.RegionPlace (idRegionPlace)
     	ON DELETE CASCADE
     	ON UPDATE CASCADE);
 
