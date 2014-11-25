@@ -34,13 +34,12 @@ CREATE  TABLE codington.TypePlace (
 	Name VARCHAR(30) NOT NULL ,
 	Description VARCHAR(500) NOT NULL,
 	RegionPlace INT NOT NULL,
-	
+	PRIMARY KEY (idTypePlace),
 	CONSTRAINT typeToRegion
-    	FOREIGN KEY (idRegionPlace)
+    	FOREIGN KEY (RegionPlace)
    	 REFERENCES codington.RegionPlace (idRegionPlace)
     	ON DELETE CASCADE
     	ON UPDATE CASCADE);
-	PRIMARY KEY (idTypePlace) );
 
 	
 	
