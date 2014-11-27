@@ -2,7 +2,7 @@
 
 <properties>
 	<connection>
-		<event >
+		<event>
 			<selectEvent>SELECT * FROM codington.event WHERE (idEvent = ?);</selectEvent>
 			<viewEvent>SELECT * FROM codington.event;</viewEvent>
 			<insertEvent>INSERT INTO codington.event(Name, Description, Place, StartTime, Duration, Event_type, Seats_available) VALUES (?, ?, ?, ?, ?, ?, ?);</insertEvent>

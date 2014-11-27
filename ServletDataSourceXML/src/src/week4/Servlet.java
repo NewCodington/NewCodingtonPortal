@@ -41,13 +41,14 @@ public class Servlet extends HttpServlet {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder xmlParser = dbf.newDocumentBuilder();
 			// Parse the menu XML document  
-			Document doc = xmlParser.parse(webRoot + "/connection.xml");  
+			Document doc = xmlParser.parse(webRoot + "/properties.xml");  
 			  doc.getDocumentElement().normalize();
 			  System.out.println("Root element " + doc.getDocumentElement().getNodeName());
-			  NodeList nodeLst = doc.getElementsByTagName("employee");
+			  NodeList nodeLst = doc.getElementsByTagName("selectEvent");
 			  System.out.println("Information of all employees");
+			  
 
-			  for (int s = 0; s < nodeLst.getLength(); s++) {
+			  /*for (int s = 0; s < nodeLst.getLength(); s++) {
 
 			    Node fstNode = nodeLst.item(s);
 			    
@@ -64,7 +65,7 @@ public class Servlet extends HttpServlet {
 			      System.out.println("Last Name : " + ((Node) lstNm.item(0)).getNodeValue());
 			    }
 
-			  }
+			  }*/
 		} catch (Exception e) {
 			    e.printStackTrace();
 		}
