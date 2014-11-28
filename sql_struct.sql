@@ -48,7 +48,7 @@ CREATE  TABLE codington.Place (
 	idPlace INT NOT NULL AUTO_INCREMENT ,
 	Name VARCHAR(50) NOT NULL ,
   	TypePlace INT NOT NULL,
-	Image BLOB NULL ,
+	Image LONGBLOB NULL ,
 	Address VARCHAR(30) NULL ,
 	Description VARCHAR(1000) NULL ,
 	PRIMARY KEY (idPlace),
