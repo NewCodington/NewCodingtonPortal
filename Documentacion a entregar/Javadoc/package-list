@@ -1,0 +1,7 @@
+springcodingtonportal.controller
+springcodingtonportal.model.dao
+springcodingtonportal.model.domain
+springcodingtonportal.model.mapper
+springcodingtonportal.model.services
+springcodingtonportal.tests
+springcodingtonportal.utils
