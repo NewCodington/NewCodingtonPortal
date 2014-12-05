@@ -84,7 +84,7 @@ CREATE TABLE `eventregistration` (
   KEY `visitorToEvent` (`idVisitorR`),
   CONSTRAINT `EventToVisitor` FOREIGN KEY (`idEventR`) REFERENCES `event` (`idEvent`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `visitorToEvent` FOREIGN KEY (`idVisitorR`) REFERENCES `visitor` (`idVisitor`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +113,7 @@ CREATE TABLE `place` (
   PRIMARY KEY (`idPlace`),
   KEY `typeToPlace` (`TypePlace`),
   CONSTRAINT `typeToPlace` FOREIGN KEY (`TypePlace`) REFERENCES `typeplace` (`idTypePlace`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +147,7 @@ CREATE TABLE `visitor` (
   `isAdmin` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idVisitor`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,7 +180,7 @@ CREATE TABLE `event` (
   PRIMARY KEY (`idEvent`),
   KEY `placeToEvent` (`Place`),
   CONSTRAINT `placeToEvent` FOREIGN KEY (`Place`) REFERENCES `place` (`idPlace`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `event` (
 
 LOCK TABLES `event` WRITE;
 /*!40000 ALTER TABLE `event` DISABLE KEYS */;
-INSERT INTO `event` VALUES (1,'Velázquez, painter of history','Conference about the famous spanish painter.',4,'2014-12-22','9.00 AM','60 min','Painting',30),(2,'The Science of Natural Disasters','Earthquakes. Volcanoes. Tornadoes...',2,'2014-12-11','17.00 PM','120 min','Science',60),(3,'Ronaldo´s friends vs Messi´s friends','Football match with best world´s players.',5,'2014-12-02','7.00 PM','90 min','Football',85454),(4,'The Lion King','Disney’s award-winning musical The Lion King.',8,'2014-12-22','8.15 PM','70 min','Musical',1104),(5,'Boston Americans vs Chicago White Sox','American League of Baseball match.',6,'2014-12-22','10.30 PM','190 min','Baseball',56000),(6,'Zoo Guided Tour','Zoo Guided tour to see the different animals.',10,'2014-12-22','12.30 PM','100 min','Zoo Animals',254),(7,'Festival Park','Celebration for handicapped children.',12,'2014-12-22','16.30 PM','50 min','Festival',560),(8,'Tour in Eye Tourism Attraction','Giant Ferris on the South of Codington.',13,'2014-12-22','19.30 PM','30 min','Attraction',952),(9,'Medieval Market','Sale products of medieval times.',16,'2014-12-22','10.30 AM','150 min','Market',2102);
+INSERT INTO `event` VALUES (1,'Velazquez, painter of history','Conference about the famous spanish painter.',4,'2014-12-22','9.00 AM','60 min','Painting',30),(2,'The Science of Natural Disasters','Earthquakes. Volcanoes. Tornadoes...',2,'2014-12-11','17.00 PM','120 min','Science',60),(3,'Ronaldo\'s friends vs Messi\'s friends','Football match with best world\'s players.',5,'2014-12-02','7.00 PM','90 min','Football',85454),(4,'The Lion King','Disney\'s award-winning musical The Lion King.',8,'2014-12-22','8.15 PM','70 min','Musical',1104),(5,'Boston Americans vs Chicago White Sox','American League of Baseball match.',6,'2014-12-22','10.30 PM','190 min','Baseball',56000),(6,'Zoo Guided Tour','Zoo Guided tour to see the different animals.',10,'2014-12-22','12.30 PM','100 min','Zoo Animals',254),(7,'Festival Park','Celebration for handicapped children.',12,'2014-12-22','16.30 PM','50 min','Festival',560),(8,'Tour in Eye Tourism Attraction','Giant Ferris on the South of Codington.',13,'2014-12-22','19.30 PM','30 min','Attraction',952),(9,'Medieval Market','Sale products of medieval times.',16,'2014-12-22','10.30 AM','150 min','Market',2102);
 /*!40000 ALTER TABLE `event` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,4 +227,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-05  1:20:31
+-- Dump completed on 2014-12-05  2:23:09
